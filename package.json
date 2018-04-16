@@ -29,15 +29,25 @@
     "url": "https://github.com/knpwrs/react-compose-components/issues"
   },
   "homepage": "https://github.com/knpwrs/react-compose-components#readme",
+  "peerDependencies": {
+    "react": "^16.3.2"
+  },
   "devDependencies": {
     "@types/jest": "^22.2.3",
+    "@types/react": "^16.3.11",
+    "@types/react-dom": "^16.0.5",
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.1.0",
     "eslint": "^4.19.1",
-    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
     "eslint-plugin-typescript": "^0.11.0",
     "jest": "^22.4.3",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-testing-library": "^2.1.1",
     "ts-jest": "^22.4.3",
     "typescript": "^2.8.1",
     "typescript-eslint-parser": "^14.0.0"

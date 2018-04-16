@@ -2,8 +2,9 @@
   "compilerOptions": {
     "module": "commonjs",
     "esModuleInterop": true,
+    "jsx": "react",
     "target": "es5",
-    "lib": ["es6"],
+    "lib": ["es6", "dom"],
     "noImplicitAny": true,
     "strict": true,
     "strictFunctionTypes": false,

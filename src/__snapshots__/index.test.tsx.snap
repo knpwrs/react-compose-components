@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should compose components and attach props 1`] = `
+<div
+  class="foo"
+>
+  <ul>
+    <li>
+      Bar
+    </li>
+  </ul>
+</div>
+`;

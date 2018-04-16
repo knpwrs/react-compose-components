@@ -5,14 +5,15 @@ module.exports = {
     },
   },
   moduleFileExtensions: [
-    'ts',
     'js',
+    'ts',
+    'tsx',
   ],
   transform: {
     '^.+\\.(ts|tsx)$': './node_modules/ts-jest/preprocessor.js',
   },
   testMatch: [
-    '**/*.test.(ts|js)',
+    '**/*.test.(js|ts|tsx)',
   ],
-  testEnvironment: 'node',
+  testEnvironment: 'jsdom',
 };

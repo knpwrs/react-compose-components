@@ -1,4 +1,4 @@
-extends: airbnb-base
+extends: airbnb
 parser: typescript-eslint-parser
 plugins:
   - typescript
@@ -7,10 +7,18 @@ settings:
     node:
       extensions:
         - .ts
+        - .tsx
 rules:
   import/extensions: off
+  react/jsx-filename-extension: [error, { extensions: ['.tsx']}]
   typescript/no-unused-vars: error
 overrides:
-  files: ["src/**/*.test.ts"]
-  env:
-    jest: true
+  - files: ["src/**/*.test.ts", "src/**/*.test.tsx"]
+    env:
+      jest: true
+    rules:
+      import/no-extraneous-dependencies: off
+  - files: ["src/**/*.ts", "src/**/*.tsx"]
+    rules:
+      no-undef: off
+      no-restricted-globals: off
