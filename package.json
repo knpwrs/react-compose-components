@@ -1,6 +1,6 @@
 {
   "name": "react-compose-components",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A utility to flatten component pyramids in React.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
