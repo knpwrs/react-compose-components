@@ -1,0 +1,45 @@
+{
+  "name": "react-compose-components",
+  "version": "0.0.0",
+  "description": "A utility to flatten component pyramids in React.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "commit": "git-cz",
+    "prebuild": "npm run lint",
+    "build": "tsc",
+    "prepack": "npm run build",
+    "lint": "eslint src --ext .ts,.tsx",
+    "test": "jest",
+    "posttest": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/knpwrs/react-compose-components.git"
+  },
+  "keywords": [
+    "react",
+    "compose",
+    "components",
+    "pyramid"
+  ],
+  "author": "Kenneth Powers <ken@kenpowers.net> (https://knpw.rs)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/knpwrs/react-compose-components/issues"
+  },
+  "homepage": "https://github.com/knpwrs/react-compose-components#readme",
+  "devDependencies": {
+    "@types/jest": "^22.2.3",
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.1.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-typescript": "^0.11.0",
+    "jest": "^22.4.3",
+    "ts-jest": "^22.4.3",
+    "typescript": "^2.8.1",
+    "typescript-eslint-parser": "^14.0.0"
+  }
+}

@@ -1,0 +1,16 @@
+extends: airbnb-base
+parser: typescript-eslint-parser
+plugins:
+  - typescript
+settings:
+  import/resolver:
+    node:
+      extensions:
+        - .ts
+rules:
+  import/extensions: off
+  typescript/no-unused-vars: error
+overrides:
+  files: ["src/**/*.test.ts"]
+  env:
+    jest: true
