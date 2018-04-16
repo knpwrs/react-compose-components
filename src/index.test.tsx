@@ -7,15 +7,14 @@ interface Props {
 }
 
 const Div = ({ children, ...rest }: Props) => <div {...rest}>{children}</div>;
-const Ul = ({ children }: Props) => <ul>{children}</ul>;
 const Li = ({ children }: Props) => <li>{children}</li>;
 
-it('should compose components and attach props', () => {
+it('should compose components and attach props with children', () => {
   const { container } = render((
     <Compose
       components={[
         [Div, { className: 'foo' }],
-        Ul,
+        'ul',
         Li,
       ]}
     >
@@ -36,6 +35,28 @@ it('should compose components and attach props', () => {
   expect(li.className).toBe('');
   expect(li.children).toHaveLength(0);
   expect(li.textContent).toBe('Bar');
+  // Extra safety
+  expect(div).toMatchSnapshot();
+});
+
+it('should compose components without children', () => {
+  const { container } = render((
+    <Compose
+      components={[
+        ['div', { className: 'foo' }],
+        ['i', { className: 'icon-bar' }],
+      ]}
+    />
+  ));
+  // Explicitly manual testing
+  const div = container.children[0];
+  expect(div.tagName).toBe('DIV');
+  expect(div.className).toBe('foo');
+  expect(div.children).toHaveLength(1);
+  const i = div.children[0];
+  expect(i.tagName).toBe('I');
+  expect(i.className).toBe('icon-bar');
+  expect(i.children).toHaveLength(0);
   // Extra safety
   expect(div).toMatchSnapshot();
 });

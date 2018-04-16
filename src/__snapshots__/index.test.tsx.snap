@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should compose components and attach props 1`] = `
+exports[`should compose components and attach props with children 1`] = `
 <div
   class="foo"
 >
@@ -9,5 +9,15 @@ exports[`should compose components and attach props 1`] = `
       Bar
     </li>
   </ul>
+</div>
+`;
+
+exports[`should compose components without children 1`] = `
+<div
+  class="foo"
+>
+  <i
+    class="icon-bar"
+  />
 </div>
 `;
