@@ -3,11 +3,10 @@ import React, {
   ReactElement,
 } from 'react';
 
-export type InputType =
-  string |
-  ComponentType |
-  [ComponentType, { [name: string]: any }] |
-  [string, { [name: string ]: any }];
+export type InputType = string
+  | ComponentType
+  | [ComponentType, { [name: string]: any }]
+  | [string, { [name: string ]: any }];
 
 export interface Props {
   components: InputType[];
