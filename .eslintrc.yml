@@ -1,7 +1,7 @@
 extends: airbnb
-parser: typescript-eslint-parser
+parser: '@typescript-eslint/parser'
 plugins:
-  - typescript
+  - '@typescript-eslint'
 settings:
   import/resolver:
     node:
@@ -11,7 +11,7 @@ settings:
 rules:
   import/extensions: off
   react/jsx-filename-extension: [error, { extensions: ['.tsx']}]
-  typescript/no-unused-vars: error
+  '@typescript-eslint/no-unused-vars': error
 overrides:
   - files: ["src/**/*.test.ts", "src/**/*.test.tsx"]
     env:
